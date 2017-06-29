@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#EB423E"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Wenzty实训"
+        />
+
+        <android.support.v4.view.ViewPager
+             android:id="@+id/view_pager"
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#44000000"/>
+
+   <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/rd_01"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_home_tab_01"
+            android:text="新闻"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:button="@null"
+            android:textColor="@color/selector_home_tab"
+            />
+        <RadioButton
+            android:id="@+id/rd_02"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_home_tab_02"
+            android:text="视听"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:button="@null"
+            android:textColor="@color/selector_home_tab"
+            />
+        <RadioButton
+            android:id="@+id/rd_03"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_home_tab_03"
+            android:text="阅读"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:button="@null"
+            android:textColor="@color/selector_home_tab"
+            />
+        <RadioButton
+            android:id="@+id/rd_04"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_home_tab_04"
+            android:text="发现"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:button="@null"
+            android:textColor="@color/selector_home_tab"
+            />
+        <RadioButton
+            android:id="@+id/rd_05"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_home_tab_05"
+            android:text="设置"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:button="@null"
+            android:textColor="@color/selector_home_tab"
+            />
+    </RadioGroup>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="220dp"
+        android:layout_gravity="left"
+        app:headerLayout="@layout/navigation_view_header"
+        app:menu="@menu/navigation_view"
+        android:layout_height="match_parent"/>
+
+
+
+</android.support.v4.widget.DrawerLayout>
